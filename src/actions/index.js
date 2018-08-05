@@ -18,7 +18,18 @@ export const setEditModeNote = (id) => ({
   id: id
 });
 
-
 export const setAllNotesIdle = () => ({
   type: ActionTypes.SET_ALL_IDLE
+});
+
+
+//selection actions:
+export const toggleSelectNote = (id) => ({
+  type: ActionTypes.TOGGLE_SELECT_NOTE,
+  id: id
+});
+
+export const unselectAllNotes = (ids) => ({
+  type: ActionTypes.UNSELECT_ALL_NOTES,
+  exceptions: ids
 });

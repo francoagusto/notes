@@ -2,13 +2,14 @@ import { connect } from 'react-redux';
 import NoteState from '../actions/NoteState';
 import Note from '../components/Note';
 import doubleClickBehavior from '../components/DoubleClickBehavior';
-import { setEditModeNote, updateNote, setAllNotesIdle} from '../actions';
+import { toggleSelectNote, setEditModeNote, updateNote, setAllNotesIdle } from '../actions';
 
 
 const mapStateToProps = (state, ownProps) => {
     return {
         editable: NoteState.EDITABLE === ownProps.state,
-        textValue: ownProps.text
+        textValue: ownProps.text,
+        selected: (state.selection.selected || []).includes(ownProps.id)
     }
 };
 
@@ -22,6 +23,12 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
         dispatch(setAllNotesIdle());
         dispatch(setEditModeNote(ownProps.id));
 
+    },
+ 
+    onTrustClick: () => {
+        const id = ownProps.id;
+        dispatch(setAllNotesIdle());
+        dispatch(toggleSelectNote(id));
     }
 });
 
