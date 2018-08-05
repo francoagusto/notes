@@ -2,7 +2,6 @@ import React from 'react'
 import CanvasContainer from '../containers/CanvasContainer'
 import { connect } from 'react-redux'
 import NoteContainer from '../containers/NoteContainer'
-import {} from '../actions'
 
 const App = ({notes, selection, setMultipleSelection, copySelection, pasteSelection}) => (
   <div>

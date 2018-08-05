@@ -26,6 +26,9 @@ const notes = (state = {}, action) => {
           return Object.assign({}, state);
       }
       return state;
+      
+    case ACTIONS.SET_ALL_IDLE:
+      return Object.keys(state).map( key => { return { ...state[key], state: NoteState.IDLE} });
 
     default:
       return state;

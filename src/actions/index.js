@@ -17,3 +17,8 @@ export const setEditModeNote = (id) => ({
   type: ActionTypes.SET_EDIT_MODE,
   id: id
 });
+
+
+export const setAllNotesIdle = () => ({
+  type: ActionTypes.SET_ALL_IDLE
+});
