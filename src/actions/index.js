@@ -39,3 +39,17 @@ export const setEnabledMultipleSelection = (value) => ({
   type: ActionTypes.SET_ENABLED_MULTIPLE_SELECTION,
   value: value
 });
+
+
+//clipboard actions
+export const copySelection = (notes, selection) => ({
+  type: ActionTypes.COPY_SELECTION,
+  notes: notes,
+  selection: selection
+
+});
+
+export const addNotes = (notes) => ({
+  type: ActionTypes.ADD_NOTES,
+  notes: notes
+});
