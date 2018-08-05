@@ -1,7 +1,16 @@
-import { render } from 'react-dom'
+import React from 'react';
+import { render } from 'react-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import rootReducer from './reducers';
 
 
+const store = createStore(rootReducer);
 
-render(null,
+
+render(
+  <Provider store={store}>
+    <div></div>
+  </Provider>,
   document.getElementById('root')
-)
+);
