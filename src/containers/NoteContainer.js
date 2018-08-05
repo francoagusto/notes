@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import NoteState from '../actions/NoteState';
 import Note from '../components/Note';
 import doubleClickBehavior from '../components/DoubleClickBehavior';
-import { toggleSelectNote, setEditModeNote, updateNote, setAllNotesIdle } from '../actions';
+import { unselectAllNotes, toggleSelectNote, setEditModeNote, updateNote, setAllNotesIdle } from '../actions';
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -19,7 +19,7 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
     },
 
     onTrustDoubleClick: (event) => {
-
+        dispatch(unselectAllNotes());
         dispatch(setAllNotesIdle());
         dispatch(setEditModeNote(ownProps.id));
 

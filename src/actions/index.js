@@ -33,3 +33,9 @@ export const unselectAllNotes = (ids) => ({
   type: ActionTypes.UNSELECT_ALL_NOTES,
   exceptions: ids
 });
+
+
+export const setEnabledMultipleSelection = (value) => ({
+  type: ActionTypes.SET_ENABLED_MULTIPLE_SELECTION,
+  value: value
+});
