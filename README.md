@@ -1,8 +1,8 @@
 ## TODO
--Normalize shape of reducer
--Use SVG instead DOM elements for Canvas component
--Use Typescript instead js
--Add different kind of items building with a factory pattern combining behaviors. 
+-Normalize shape of reducer<br>
+-Use SVG instead DOM elements for Canvas component<br>
+-Use Typescript instead js<br>
+-Add different kind of items building with a factory pattern combining behaviors.<br>
 
 
 ## Available Scripts
